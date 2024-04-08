@@ -31,6 +31,6 @@ I = ideal{x^2,x*y, y*z, z^2,z*u, u^2, u*v, v*w,w^2, x*z + a*z*w - u*w,z*w+ x*u +
 R = Q/I
     
 A = homogDual(R);
-ideal A
 
-ncGroebnerBasis ideal A
+-- Did not finish after a few minutes
+
