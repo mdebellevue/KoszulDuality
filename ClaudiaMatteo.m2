@@ -1,6 +1,7 @@
 needsPackage "NCAlgebra"
 
 k = ZZ/101;
+
 R = k[x,y,z]/(ideal(x*y,(x+y)*z,x^2+x*z+y^2));
 A = homogDual(R);
 ideal A
@@ -25,6 +26,25 @@ o6 = zxy-yzx-yxz+xzx-xyz+x z-x ; Lead Term = (zxy, 1)
 
 *-
 
+ R = k[x,y,z]/(ideal (x^2,y*z,x*y+x*z));
+ 
+A = homogDual(R);
+ideal A
+-* Output:
+o6 = Two-sided ideal {y , zx-yx+xz-xy, z }
+*-
+ 
+ncGroebnerBasis ideal A
+-* Output
+o7 = zyx-yxz+yxy-xzy-xyz; Lead Term = (zyx, 1)
+      2                2
+     y ; Lead Term = (y , 1)
+     zx-yx+xz-xy; Lead Term = (zx, 1)
+      2                2
+     z ; Lead Term = (z , 1)
+
+
+*-
 a=5
 Q = k[x,y,z,u,v,w]
 I = ideal{x^2,x*y, y*z, z^2,z*u, u^2, u*v, v*w,w^2, x*z + a*z*w - u*w,z*w+ x*u + (a - 2)*u*w}
