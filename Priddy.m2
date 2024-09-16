@@ -12,8 +12,6 @@ toNCRing Ideal := I -> (
 
 homogDual Ideal := I -> homogDual toNCRing I
 
--- TODO: Fix when the dual has an infinite GB
-
 priddyComplex = method()
 priddyComplex (NCRing,ZZ,ZZ) := (R,n,m) -> (
     Rs := homogDual R;
